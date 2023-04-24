@@ -1,0 +1,61 @@
+{
+  "name": "lil-theta",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "in house ui for grim",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/lil-theta.umd.cjs",
+  "module": "./dist/lil-theta.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/lil-theta.es.js",
+      "require": "./dist/lil-theta.umd.cjs"
+    },
+    "./styles": "./dist/style.css"
+  },
+  "typings": "dist/main.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "tsc && eslint src/**/*.ts[x]",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.11.0",
+    "@vanilla-extract/recipes": "^0.4.0",
+    "@vanilla-extract/sprinkles": "^1.6.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^7.0.4",
+    "@storybook/addon-interactions": "^7.0.4",
+    "@storybook/addon-links": "^7.0.4",
+    "@storybook/blocks": "^7.0.4",
+    "@storybook/builder-vite": "^7.0.4",
+    "@storybook/react": "^7.0.4",
+    "@storybook/react-vite": "^7.0.4",
+    "@storybook/testing-library": "^0.0.14-next.2",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@vanilla-extract/vite-plugin": "^3.8.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-storybook": "^0.6.11",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.0.4",
+    "vite": "^4.2.0",
+    "vite-plugin-dts": "^2.3.0"
+  }
+}
